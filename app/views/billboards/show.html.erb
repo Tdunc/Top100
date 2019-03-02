@@ -1,0 +1,11 @@
+<h1> TOP 100 <%=@billboard.name%></h1>
+
+<ul>
+<% current_song = 1 %>
+<% @billboard.songs.each do |song|%>
+        <li><%= "#{current_song}) #{song.name} by #{song.artist.name}" %></li>
+        <% current_song += 1 %>
+    <% end %>
+</ul>
+
+
